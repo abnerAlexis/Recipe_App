@@ -28,6 +28,10 @@ load_dotenv()
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+# The value of the DEBUG will be True by default, but will only 
+# be False if the value of the DJANGO_DEBUG environment variable
+# is set to False or DJANGO_DEBUG=False is set in the .env file.
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
