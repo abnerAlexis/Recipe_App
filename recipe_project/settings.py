@@ -137,3 +137,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_URL='/login/'
 REGISTER_URL='/register/'
+
+
+#specify the database in production. For development, 
+#it will remain SQLite as before
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
