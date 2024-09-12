@@ -28,7 +28,8 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        margin-top: 10px;
+        display: flex; /* Use flexbox for horizontal layout */
+        gap: 10px;
       }
       .logout-link {
         text-decoration: none;
@@ -140,10 +141,9 @@
   <body>
     <div class="app-title">Recipe App</div>
 
-    {% comment %} <div class="button-container">
-      <a href="{% url 'recipes:list' %}" class="back-button">Back</a>
+    <div class="button-container">
       <a href="{% url 'logout' %}" class="logout-link">Logout</a>
-    </div> {% endcomment %}
+    </div>
 
     <div class="search-container">
       <h2>Search for recipes</h2>

@@ -20,6 +20,15 @@
         flex-direction: column; /* Center content vertically */
       }
 
+      .app-title {
+        position: absolute; /* Position in the top left corner */
+        top: 30px;
+        left: 20px;
+        font-size: 34px;
+        color: #631a02;
+        font-weight: 700;
+      }
+
       .button-container {
         position: absolute;
         top: 20px; 
@@ -76,6 +85,8 @@
     </style>
   </head>
   <body>
+    <div class="app-title">Recipe App</div>
+    
     <div class="button-container">
       <a href="{% url 'recipes:list' %}" class="back-link">Back</a>
       <a href="{% url 'logout' %}" class="logout-link">Logout</a>
